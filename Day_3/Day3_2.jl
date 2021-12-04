@@ -1,3 +1,5 @@
+using BenchmarkTools
+
 inp = open("$(@__DIR__)/input.txt")
 input = readlines(inp)
 
@@ -24,7 +26,10 @@ function find_param(input, typ)
   return parse(Int32, join(input[1]), base=2)
 end
 
-O₂ = find_param(copy(input), ("1", "0"))
-CO₂ = find_param(copy(input), ("0", "1"))
+input1 = copy(input)
+input2 = copy(input)
 
-println(O₂ * CO₂)
+@btime O₂ = find_param(input1, ("1", "0"))#*find_param(input2, ("0", "1"))
+#CO₂ = find_param(copy(input), ("0", "1"))
+#
+#println(O₂ * CO₂)
