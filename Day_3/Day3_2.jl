@@ -31,5 +31,5 @@ input2 = copy(input)
 
 @btime O₂ = find_param(input1, ("1", "0"))#*find_param(input2, ("0", "1"))
 #CO₂ = find_param(copy(input), ("0", "1"))
-#
+
 #println(O₂ * CO₂)

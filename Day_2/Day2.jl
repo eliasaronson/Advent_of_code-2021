@@ -2,7 +2,6 @@ using BenchmarkTools, Base.Threads
 inp = open("$(@__DIR__)/input.txt")
 input = readlines(inp)
 
-
 function calc(input)
   depth = 0
   hori = 0
