@@ -1,3 +1,4 @@
+using BenchmarkTools
 inp = open("$(@__DIR__)/input.txt")
 
 mutable struct Boards
